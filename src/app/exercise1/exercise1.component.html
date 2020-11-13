@@ -1,0 +1,39 @@
+<h1>Exercise 1</h1>
+
+<h3>Slider <small><i>(Multi Range from mock API)</i></small></h3>
+<br>
+<ngc-range 
+    [min]="slider1.minValue" 
+    [max]="slider1.maxValue"
+    [minSelected]="slider1.minSelected"
+    [maxSelected]="slider1.maxSelected"
+    [currencySymbol]="slider1.currencySymbol"
+    (rangeChange)="onSliderChange($event)">
+</ngc-range>
+<p>Selected Values: {{slider1.currentValues | json}}</p>
+
+<h3>Slider <small><i>(Single Range)</i></small></h3>
+<br>
+<ngc-range
+    [multiRange]="false"
+    [min]="slider2.minValue" 
+    [max]="slider2.maxValue"
+    [minSelected]="slider2.minSelected"
+    [currencySymbol]="slider2.currencySymbol"
+    (rangeChange)="onSliderChange2($event)">
+</ngc-range>
+<p>Selected Values: {{slider2.currentValues | json}}</p>
+
+<h3>Slider <small><i>(Multi Range with steps and currency)</i></small></h3>
+<br>
+<ngc-range
+    [min]="slider3.minValue" 
+    [max]="slider3.maxValue"
+    [minSelected]="slider3.minSelected"
+    [maxSelected]="slider3.maxSelected"
+    [step]="slider3.step"
+    [currencySymbol]="slider3.currencySymbol"
+    [showStepIndicator]="slider3.showStepIndicator"
+    (rangeChange)="onSliderChange3($event)">
+</ngc-range>
+<p>Selected Values: {{slider3.currentValues | json}}</p>
